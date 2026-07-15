@@ -13,7 +13,7 @@ Guests will access this site via a QR code at the venue in Indianapolis to uploa
 
 **UI/UX Requirements:**
 *   **Mobile-First:** 99% of users will access this via their smartphones. Buttons must be large, accessible, and tap-friendly.
-*   **Theme:** Elegant, clean, and celebratory (e.g., a simple white/off-white background, elegant serif fonts for headings, and a refined accent color). 
+*   **Theme:** Elegant, clean, and celebratory (Wedding colors are sage green and pink). 
 *   **Copy:** The page should warmly welcome guests to "Kate & [Partner's Name]'s Wedding" and invite them to share their memories. 
 
 **Functional Requirements:**
