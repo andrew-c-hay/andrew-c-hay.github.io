@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="Upload photos and videos from Kate & Andy's wedding celebration."
+    />
+    <title>Kate & Andy's Wedding</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="card">
+        <div class="hero">
+          <h1>Welcome to Kate & Andy's Wedding</h1>
+          <p>
+            Share your favorite moments from the celebration with us. Select your photos and videos
+            below to upload them for the happy couple to enjoy.
+          </p>
+        </div>
+
+        <div class="dropzone">
+          <strong>Choose your memories</strong>
+          <p>Pick one or many photos and videos from your phone.</p>
+          <div class="file-input">
+            <input id="fileInput" type="file" accept="image/*,video/*" multiple />
+          </div>
+          <div class="actions">
+            <button id="uploadButton" class="primary-btn" type="button">Upload Memories</button>
+            <button id="clearButton" class="secondary-btn" type="button">Clear Selection</button>
+          </div>
+        </div>
+
+        <div id="status" class="status" aria-live="polite">
+          <h2>Ready to share</h2>
+          <p>Select files to begin uploading.</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
