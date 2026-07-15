@@ -5,7 +5,7 @@
 **Role:** You are an expert frontend web developer. Your task is to build a single-page HTML/JS/CSS application for a wedding photo upload portal.
 
 **Context & Objective:** 
-Guests will access this site via a QR code at the venue in Indianapolis to upload photos and videos taken during the August 22, 2026 wedding celebration for Kate and her partner. The application will be a purely static site hosted on GitHub Pages. There is no custom backend. 
+Guests will access this site via a QR code at the venue in Indianapolis to upload photos and videos taken during the August 22, 2026 wedding celebration for Kate and Andy. The application will be a purely static site hosted on GitHub Pages. There is no custom backend. 
 
 **Architecture:**
 *   **Frontend:** Vanilla HTML5, CSS3, and modern JavaScript. No heavy frameworks (React/Vue) are needed. All code should reside in a single `index.html` file for simplicity.
