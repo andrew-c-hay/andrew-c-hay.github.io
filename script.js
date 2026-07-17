@@ -1,5 +1,5 @@
-const CLOUD_NAME = 'your_cloud_name_here';
-const UPLOAD_PRESET = 'your_unsigned_preset_here';
+const CLOUD_NAME = 'nef5dk4b';
+const UPLOAD_PRESET = 'wedding';
 
 const fileInput = document.getElementById('fileInput');
 const uploadButton = document.getElementById('uploadButton');
