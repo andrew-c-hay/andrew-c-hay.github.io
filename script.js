@@ -5,6 +5,8 @@ const fileInput = document.getElementById('fileInput');
 const uploadButton = document.getElementById('uploadButton');
 const clearButton = document.getElementById('clearButton');
 const status = document.getElementById('status');
+const pickerTitle = document.getElementById('pickerTitle');
+const pickerSubtitle = document.getElementById('pickerSubtitle');
 
 let selectedFiles = [];
 
@@ -16,7 +18,22 @@ function setStatus(message, type = 'info', details = '') {
   }
 }
 
+function updatePickerLabel() {
+  if (!selectedFiles.length) {
+    if (pickerTitle) pickerTitle.textContent = 'Choose files';
+    if (pickerSubtitle) pickerSubtitle.textContent = 'Photos, videos, and iPhone HEICs are welcome';
+    return;
+  }
+
+  const count = selectedFiles.length;
+  const label = count === 1 ? 'file' : 'files';
+  if (pickerTitle) pickerTitle.textContent = `${count} ${label} selected`;
+  if (pickerSubtitle) pickerSubtitle.textContent = 'Tap again to change your selection';
+}
+
 function updateSelectionSummary() {
+  updatePickerLabel();
+
   if (!selectedFiles.length) {
     setStatus('Select files to begin uploading.', 'info');
     return;
@@ -35,6 +52,7 @@ fileInput.addEventListener('change', (event) => {
 clearButton.addEventListener('click', () => {
   selectedFiles = [];
   fileInput.value = '';
+  updatePickerLabel();
   setStatus('Selection cleared. Choose another set of memories.', 'info');
 });
 
@@ -64,8 +82,9 @@ uploadButton.addEventListener('click', async () => {
 
   for (let index = 0; index < selectedFiles.length; index += 1) {
     const file = selectedFiles[index];
+    const isImageLike = file.type.startsWith('image/') || /\.(heic|heif)$/i.test(file.name);
     try {
-      const uploadFile = file.type.startsWith('image/') ? await resizeImage(file) : file;
+      const uploadFile = isImageLike ? await resizeImage(file) : file;
       const formData = new FormData();
       formData.append('file', uploadFile);
       formData.append('upload_preset', UPLOAD_PRESET);
@@ -130,9 +149,11 @@ function resizeImage(file) {
               reject(new Error('Could not resize image.'));
               return;
             }
-            resolve(new File([blob], file.name, { type: blob.type || file.type }));
+
+            const outputName = file.name.replace(/\.(heic|heif)$/i, '.jpg');
+            resolve(new File([blob], outputName, { type: 'image/jpeg' }));
           },
-          file.type || 'image/jpeg',
+          'image/jpeg',
           0.9,
         );
       };

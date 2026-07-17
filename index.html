@@ -8,6 +8,7 @@
       content="Upload photos and videos from Kate & Andy's wedding celebration."
     />
     <title>Kate & Andy's Wedding</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -23,10 +24,17 @@
 
         <div class="dropzone">
           <strong>Choose your memories</strong>
-          <p>Pick one or many photos and videos from your phone.</p>
-          <div class="file-input">
-            <input id="fileInput" type="file" accept="image/*,video/*" multiple />
-          </div>
+          <p>Tap the box below to pick one or many photos and videos from your phone.</p>
+          <label class="file-picker" for="fileInput">
+            <span id="pickerTitle" class="file-picker-title">Choose files</span>
+            <span id="pickerSubtitle" class="file-picker-subtitle">Photos, videos, and iPhone HEICs are welcome</span>
+          </label>
+          <input
+            id="fileInput"
+            type="file"
+            accept="image/*,image/heic,image/heif,video/*,.heic,.heif"
+            multiple
+          />
           <div class="actions">
             <button id="uploadButton" class="primary-btn" type="button">Upload Memories</button>
             <button id="clearButton" class="secondary-btn" type="button">Clear Selection</button>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Wedding ring and heart icon">
+  <rect width="64" height="64" rx="16" fill="#fff8fb"/>
+  <circle cx="24" cy="24" r="12" fill="none" stroke="#8fa88d" stroke-width="4"/>
+  <circle cx="40" cy="24" r="12" fill="none" stroke="#c9859d" stroke-width="4"/>
+  <path d="M24 38c0-6 5-10 10-10s10 4 10 10" fill="none" stroke="#e7b8c8" stroke-width="4" stroke-linecap="round"/>
+  <path d="M20 22c-2.5 0-4.5 2-4.5 4.5S17.5 31 20 31c2.2 0 4-1.8 4.5-3.8" fill="none" stroke="#c9859d" stroke-width="4" stroke-linecap="round"/>
+  <path d="M44 22c2.5 0 4.5 2 4.5 4.5S46.5 31 44 31c-2.2 0-4-1.8-4.5-3.8" fill="none" stroke="#8fa88d" stroke-width="4" stroke-linecap="round"/>
+</svg>
