@@ -5,49 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta
       name="description"
-      content="Upload photos and videos from Kate & Andy's wedding celebration."
+      content="Kate and Andy leave their wedding ceremony beneath a shower of petals."
     />
-    <title>Kate & Andy's Wedding</title>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <title>Kate & Andy | Wedding Day</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <main class="page">
-      <section class="card">
-        <div class="hero">
-          <h1>Welcome to Kate & Andy's Wedding</h1>
-          <p>
-            Share your favorite moments from the celebration with us. Select your photos and videos
-            below to upload them for the happy couple to enjoy.
-          </p>
-        </div>
-
-        <div class="dropzone">
-          <strong>Choose your memories</strong>
-          <p>Tap the box below to pick one or many photos and videos from your phone.</p>
-          <label class="file-picker" for="fileInput">
-            <span id="pickerTitle" class="file-picker-title">Choose files</span>
-            <span id="pickerSubtitle" class="file-picker-subtitle">Photos, videos, and iPhone HEICs are welcome</span>
-          </label>
-          <input
-            id="fileInput"
-            type="file"
-            accept="image/*,image/heic,image/heif,video/*,.heic,.heif"
-            multiple
+      <figure class="photo-frame">
+        <div class="photo-mat">
+          <img
+            class="wedding-photo"
+            src="IMG_9448.jpg"
+            alt="Kate and Andy leaving their wedding ceremony as guests toss flower petals."
           />
-          <div class="actions">
-            <button id="uploadButton" class="primary-btn" type="button">Upload Memories</button>
-            <button id="clearButton" class="secondary-btn" type="button">Clear Selection</button>
-          </div>
         </div>
-
-        <div id="status" class="status" aria-live="polite">
-          <h2>Ready to share</h2>
-          <p>Select files to begin uploading.</p>
-        </div>
-      </section>
+      </figure>
     </main>
-
-    <script src="script.js"></script>
   </body>
 </html>
